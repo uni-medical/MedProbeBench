@@ -1,5 +1,3 @@
-![MedProbeBench Framework](assets/medprobebench-framework.png)
-
 # MedProbeBench Evaluation Pipeline
 
 [![arXiv](https://img.shields.io/badge/arXiv-2604.18418-b31b1b.svg)](https://arxiv.org/pdf/2604.18418)
@@ -7,6 +5,8 @@
 [![Python](https://img.shields.io/badge/Python-3.12-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![HuggingFace Dataset](https://img.shields.io/badge/HuggingFace-Dataset-FFD21E.svg?logo=huggingface&logoColor=black)](https://huggingface.co/datasets/HanToser/MedprobeBench)
 [![Project Page](https://img.shields.io/badge/Project-Page-2ea44f.svg)](https://github.com/uni-medical/MedProbeBench)
+
+![MedProbeBench Framework](assets/pipline_00.png)
 
 A complete evaluation pipeline for medical guideline generation: from model outputs to structured extraction and MedProbe-Eval based multi-dimensional scoring.
 
