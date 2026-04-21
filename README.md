@@ -29,7 +29,7 @@ In short, this benchmark targets the full lifecycle of **medical deep research -
 ## 1. Pipeline Overview
 
 ```text
-Input JSONL
+Input Markdown/Txt
    │
    ├─ Step 1: check_format
    ├─ Step 2: report_to_table
@@ -58,7 +58,7 @@ This pipeline has two major phases:
 
 | Step | Script                       | Input                     | Output                   | Purpose                                                            |
 | ---- | ---------------------------- | ------------------------- | ------------------------ | ------------------------------------------------------------------ |
-| 1    | `check_format.py`            | Raw reports / JSONL items | Validated records        | Sanity-check structure and required fields                         |
+| 1    | `check_format.py`            | Raw reports               | Validated records        | Sanity-check structure and required fields                         |
 | 2    | `report_to_table.py`         | Validated records         | Structured table data    | Convert free-form reports into tabular intermediate representation |
 | 3    | `table_to_md.py`             | Table data                | Markdown reports         | Transform structured data into standardized markdown content       |
 | 4    | `standardize_md.py`          | Markdown reports          | Cleaned markdown reports | Normalize headings, formatting, and section boundaries             |
@@ -189,6 +189,8 @@ python run_pipeline.py \
   --force-extract
 ```
 
+> Default setup: claim extraction in the pipeline uses **`gpt-4o-mini`**.
+
 Common `run_pipeline.py` flags:
 
 
@@ -216,6 +218,8 @@ bash run_medprobebench.sh \
   --global_judge_model "gpt-4.1" \
   --grader_model "gpt-4.1"
 ```
+
+> Default MedProbe-Eval setup: both evaluator roles (`global_judge_model` and `grader_model`) use **`gpt-4.1`**.
 
 Step D follows a **two-stage evaluation** setup:
 
